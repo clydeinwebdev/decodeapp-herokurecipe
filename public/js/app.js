@@ -1,3 +1,36 @@
+"use strict";
+
+class App{
+	constructor(){
+		this.x = [];
+	}
+
+	render(html,component){ //dugangan
+		component.innerHTML += html;
+	}
+
+	reRender(html,component){ //ilisdan
+		component.innerHTML = html;
+	}
+}
+
+class Component extends App{
+	constructor(){
+		super();
+	}
+
+	landingPage(){
+		let html = `
+			Hello World
+		`;
+		this.reRender(html,document.getElementById('app'));
+	}
+}
+
+let component = new Component();
+component.landingPage();
+
+
 /*
 "use strict";
 
@@ -105,7 +138,7 @@ component.ukayLayout();
 */
 
 
-
+/*
 
 "use strict";
 
@@ -895,6 +928,7 @@ class Component extends App{
 let component = new Component();
 component.recipeLayout();
 
+*/
 
 //////////////////////////////////////
 
