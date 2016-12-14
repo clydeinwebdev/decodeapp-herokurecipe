@@ -375,7 +375,7 @@ class App {
        <div id="airLayOut" class="container-fixed">
 	<nav>
     <div class="nav-wrapper">
-      <a href="#showStarter" class="brand-logo">HOME</a>
+      <a href="#showStarter" onclick="component.displayParalax()" class="brand-logo">HOME</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#showForm" onclick="component.formCreate()">Take your Flight</a></li>
         <li><a href="#passView" onclick="component.passView()">People on Board</a></li>
@@ -668,7 +668,7 @@ class App {
       <br><br>
       <h1 class="header center orange-text">Find Your Flight Now...</h1>
       <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        <h5 class="header col s12 light">Let you see whose people on your flight in Home</h5>
       </div>
       <div class="row center">
         <btn class="btn btn-info" href="" onclick="component.displayParalax()">Get Started!</btn>
@@ -687,20 +687,23 @@ class App {
 
 
 	  displayParalax(){
-        
-			let html =  `
-					<div class="parallax-container">
-					    <div class="parallax"><img src=" "></div>
-					  </div>
-					  <div class="section white">
-					    <div class="row container">
-					      <h2 class="header"></h2>
-					      <p class="grey-text text-darken-3 lighten-3"></p>
-					    </div>
-					  </div>
-					  <div class="parallax-container">
-					    <div class="parallax"><img src="http://cdn-image.travelandleisure.com/sites/default/files/styles/tnl_redesign_article_landing_page/public/landing1015-airplane.jpg?itok=VSTPzlW6"></div>
-					  </div>`;      
+           
+           let html = ``;
+          let r = this.display;
+		let count = 0;
+		for(let i=(r.length-1);i>=0;i--){
+			if(count++ === 4)break;
+			html+= `
+		    <div class="col s12 m2">
+		      <p class="z-depth-3"><img src="${r[i].photo}"/></p>
+		    </div`;
+ }       
+                         
+				html +=`<div class="parallax-container">
+      <div class="parallax"><img src="images/cc.jpg"></div>
+
+     </div>`;  
+
 				    this.reRender(`
 				${html}
 			`,document.getElementById("displayParalax")); 
@@ -785,6 +788,10 @@ $('#details').hide();
         $('#plainView').hide();
         $('#updateFlight').hide();
         	$('#Edit').hide();	
+        	$(document).ready(function(){
+      $('.parallax').parallax();
+    });
+
 	}
 
 		showPassView(){
