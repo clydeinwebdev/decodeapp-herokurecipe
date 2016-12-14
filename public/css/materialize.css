@@ -3,8 +3,15 @@
  * Copyright 2014-2015 Materialize
  * MIT License (https://raw.githubusercontent.com/Dogfalo/materialize/master/LICENSE)
  */
-.materialize-red {
-  background-color: #e51c23 !important;
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+.materialize-violet {
+  background-color: #8e24aa !important;
 }
 
 .materialize-red-text {
@@ -15,9 +22,139 @@
   background-color: #fdeaeb !important;
 }
 
+body {
+
+ background:url(../images/aa.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+background-attachment: fixed;
+background-position: center center;
+
+}
+
+
+.form-style-3{
+    max-width: 450px;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+    display:block;
+    margin-bottom: 10px;
+}
+.form-style-3 label > span{
+    float: left;
+    width: 100px;
+    color: #030303;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+    border: 1px solid #FFD2D2;
+    padding: 20px;
+    background: #E9F57D;
+    box-shadow: inset 0px 0px 15px #030303;
+    -moz-box-shadow: inset 0px 0px 15px #030303;
+    -webkit-box-shadow: inset 0px 0px 15px #030303;
+}
+.form-style-3 fieldset legend{
+    color: #FFA0C9;
+    border-top: 1px solid #FFD2D2;
+    border-left: 1px solid #FFD2D2;
+    border-right: 1px solid #FFD2D2;
+    border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    -moz-border-radius: 5px 5px 0px 0px;
+    background: #FFF4F4;
+    padding: 0px 8px 3px 8px;
+    box-shadow: -0px -1px 2px #F1F1F1;
+    -moz-box-shadow:-0px -1px 2px #F1F1F1;
+    -webkit-box-shadow:-0px -1px 2px #F1F1F1;
+    font-weight: normal;
+    font-size: 12px;
+}
+.form-style-3 textarea{
+    width:250px;
+    height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=date],
+.form-style-3 input[type=datetime],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select, 
+.form-style-3 textarea{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border: 1px solid #030303;
+    outline: none;
+    color: #030303;
+    padding: 5px 8px 5px 8px;
+    box-shadow: inset 1px 1px 4px #FFD5E7;
+    -moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+    -webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+    background: #FFEFF6;
+    width:50%;
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+    background: #EB3B88;
+    border: 1px solid #C94A81;
+    padding: 5px 15px 5px 15px;
+    color: #FFCBE2;
+    box-shadow: inset -1px -1px 3px #FF62A7;
+    -moz-box-shadow: inset -1px -1px 3px #FF62A7;
+    -webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+    border-radius: 3px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;    
+    font-weight: bold;
+}
+.required{
+    color:red;
+    font-weight:normal;
+}
+form {
+  background: -webkit-linear-gradient(bottom,#0F0F0F,#55FF37 175px);
+  background: -moz-linear-gradient(bottom, #0F0F0F, #55FF37175px);
+  background: linear-gradient(bottom, #0F0F0F, #55FF37 175px);
+  margin: auto;
+  position: relative;
+  width: 1440px;
+  height: 750px;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 24px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #0F0F0F;
+  border: inset 1px solid #0F0F0F;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
 .materialize-red-text.text-lighten-5 {
   color: #fdeaeb !important;
 }
+
+
 
 .materialize-red.lighten-4 {
   background-color: #f8c1c3 !important;
@@ -2152,6 +2289,7 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+min-height:100%;
 }
 
 /**
@@ -2266,6 +2404,8 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+ color: #EAEC12;
+font-family:"Blackadder ITC";
 }
 
 /**
@@ -2616,6 +2756,7 @@ a {
   height: 1px;
   overflow: hidden;
   background-color: #e0e0e0;
+	
 }
 
 blockquote {
@@ -2750,7 +2891,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  height: 1000px;
 }
 
 .parallax {
@@ -3352,7 +3493,7 @@ input[type=range] + .thumb {
 
 .container {
   margin: 0 auto;
-  max-width: 1280px;
+  max-width: 1200px;
   width: 90%;
 }
 
@@ -4480,7 +4621,7 @@ small {
 .card {
   position: relative;
   margin: 0.5rem 0 1rem 0;
-  background-color: #fff;
+  background-color: #73B019;
   transition: box-shadow .25s;
   border-radius: 2px;
 }
@@ -4630,14 +4771,14 @@ small {
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating) {
-  color: #ffab40;
+  color: #040404;
   margin-right: 20px;
   transition: color .3s ease;
   text-transform: uppercase;
 }
 
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover {
-  color: #ffd8a6;
+  color: #040404;
 }
 
 .card .card-reveal {
@@ -6000,7 +6141,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field label {
-  color: #9e9e9e;
+  color: #050505;
   position: absolute;
   top: 0.8rem;
   left: 0;
@@ -7651,25 +7792,6 @@ input[type=range]:focus::-ms-fill-upper {
   margin: 0;
   height: 400px;
 }
-
-.slider .slides li {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 100%;
-  height: inherit;
-  overflow: hidden;
-}
-
-.slider .slides li img {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
-
 .slider .slides li .caption {
   color: #fff;
   position: absolute;
@@ -7711,6 +7833,26 @@ input[type=range]:focus::-ms-fill-upper {
 .slider .indicators .indicator-item.active {
   background-color: #4CAF50;
 }
+.slider .slides li {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.slider .slides li img {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
 
 .carousel {
   overflow: hidden;
